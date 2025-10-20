@@ -21,13 +21,13 @@ A dnf5 plugin that automatically creates snapper btrfs snapshots
 # Copy from the unpacked source directory
 
 mkdir -p %{buildroot}/etc/dnf/libdnf5-plugins/actions.d
-cp snapper.conf %{buildroot}/etc/dnf/libdnf5-plugins/actions.d/
+cp snapper.actions %{buildroot}/etc/dnf/libdnf5-plugins/actions.d/
 
 mkdir -p %{buildroot}/usr/share/doc/%{name}/
 cp LICENSE %{buildroot}/usr/share/doc/%{name}/
 
 %files
-/etc/dnf/libdnf5-plugins/actions.d/snapper.conf
+/etc/dnf/libdnf5-plugins/actions.d/snapper.actions
 
 %license /usr/share/doc/%{name}/LICENSE
 

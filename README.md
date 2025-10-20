@@ -49,5 +49,5 @@ Running transaction
 Warning: skipped OpenPGP checks for 1 package from repository: @commandline
 Complete!
 📦[douglas@fedora ~]$ ls /etc/dnf/libdnf5-plugins/actions.d/
-snapper.conf
+snapper.actions
 ```

@@ -5,28 +5,27 @@ Summary:        A dnf5 plugin that automatically creates snapper btrfs snapshots
 
 License:        GPLv3+
 URL:            https://github.com/douglascdev/dnf5-autosnapper
+Source0:        snapper.conf
+Source1:        LICENSE
 
 Requires:       dnf5, libdnf5-plugin-actions
 BuildArch:      noarch
 
 %description
 A dnf5 plugin that automatically creates snapper btrfs snapshots
-%prep
-%autosetup
-%build
-%configure
-%make_build
+
 %install
+mkdir -p %{buildroot}/etc/dnf/libdnf5-plugins/actions.d
+cp %{SOURCE0} %{buildroot}/etc/dnf/libdnf5-plugins/actions.d/
 
-export FOLDER=%{buildroot}/etc/dnf/libdnf5-plugins/actions.d
-export FILE=$FOLDER/snapper.actions
-mkdir -p $FOLDER
-cat %{sourcesroot}/snapshot > $FILE
+mkdir -p %{buildroot}/usr/share/doc/%{name}/
+cp %{SOURCE1} %{buildroot}/usr/share/doc/%{name}/
 
-%make_install
 %files
-$FILE
-%license LICENSE
+/etc/dnf/libdnf5-plugins/actions.d/snapper.conf
+
+%license /usr/share/doc/%{name}/LICENSE
+
 %changelog
 * Mon Oct 20 2025 douglas <douglasc.dev@gmail.com>
 - First autosnapper package

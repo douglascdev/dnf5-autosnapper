@@ -2,9 +2,12 @@
 A dnf5 plugin that automatically creates snapper btrfs snapshots
 
 ## Install
+After setting up snapper, run:
 ```
 sudo dnf copr enable douglascdev/dnf5-autosnapper && sudo dnf install dnf5-autosnapper
 ```
+
+After that try some `dnf` commands and check if the snapshots are being generated.
 
 ## Recommended dev environment
 To avoid cluttering my actual fedora install with packages and files, I develop the package like this:

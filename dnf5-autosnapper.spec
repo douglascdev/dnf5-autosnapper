@@ -1,5 +1,5 @@
 Name:           dnf5-autosnapper
-Version:        0.4
+Version:        0.5
 Release:        1%{?dist}
 Summary:        A dnf5 plugin that automatically creates snapper btrfs snapshots.
 
@@ -32,6 +32,10 @@ cp LICENSE %{buildroot}/usr/share/doc/%{name}/
 %license /usr/share/doc/%{name}/LICENSE
 
 %changelog
+* Mon Oct 20 2025 douglas <douglasc.dev@gmail.com> 0.5-1
+- fix incorrect file name (douglasc.dev@gmail.com)
+- Update README (douglasc.dev@gmail.com)
+
 * Mon Oct 20 2025 douglas <douglasc.dev@gmail.com> 0.4-1
 - test (douglasc.dev@gmail.com)
 
